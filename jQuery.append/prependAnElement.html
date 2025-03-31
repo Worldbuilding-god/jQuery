@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prepend An Element With jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+    <button id="addlistitem">Add new item</button>
+    <script>
+        $(document).ready(function(){$("#addlistitem").click(function(){$("ul").prepend("<li>New First item</li>")});});
+    </script>
+</body>
+</html>

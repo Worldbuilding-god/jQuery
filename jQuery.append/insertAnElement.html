@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert an element after another</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="existingDiv">
+        <p>Ths is the existing div</p>
+    </div>
+    <div id="existingDiv2">
+        <p>Ths is the existing div 2</p>
+    </div>
+    <button id="insertDiv">Insert a new div</button>
+    <script>
+        $(document).ready(function(){$("#insertDiv").click(function(){$("<div><p>Newly Added Div</p></div>").insertAfter("#existingDiv")})});
+    </script>
+</body>
+</html>
