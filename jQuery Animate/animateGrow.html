@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.animate Grow</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        div{
+            height: 50px;
+            width: 50px;
+            border: solid 1px black;
+            background-color: purple;
+            position: relative;
+        }
+        button{
+            margin-bottom: 5px;
+            margin-left: 45%;
+        }
+        #box2{
+            margin-left: 40%;
+            margin-top: 30%;
+            height: 50px;
+            width: 50px;
+            border: solid 1px black;
+            background-color: lightgreen;
+        }
+        .btn{
+            margin-bottom: 5px;
+            margin-left: 15%;
+        }
+    </style>
+</head>
+<body>
+    <button id="grow">Grow</button>
+    <div></div>
+    <button id="animate">Initiate Animatione</button>
+    <div id="box"></div>
+    <button id="hide" class="btn">Hide</button>
+    <button id="show" class="btn">Show</button>
+    <button id="toggle" class="btn">Toggle</button>
+    <div id="box2"></div>
+
+    <script>
+        $("#grow").click(function(){
+            $("div").animate({height: "300px", width: "300px"}, "slow");
+        });
+        $("#animate").click(function(){
+            $("#box").animate({height: "300px", width: "300px"}, "slow");
+            $("#box").animate({height: "50px", width: "50px"}, "slow");
+            $("#box").animate({left: "400px"}, "slow");
+            $("#box").animate({left: "0px"}, "slow");
+        });
+        $("#hide").click(function(){
+            $("#box2").hide("slow")
+        });
+        $("#show").click(function(){
+            $("#box2").show("slow")
+        });
+        $("#toggle").click(function(){
+            $("#box2").toggle("slow")
+        });
+    </script>
+</body>
+</html>
